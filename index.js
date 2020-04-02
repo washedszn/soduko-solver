@@ -1,3 +1,5 @@
+const getBox = require('./src/box');
+
 const b = [
     [5, 3, 0, 0, 7, 0, 0, 0, 0],
     [6, 0, 0, 1, 9, 5, 0, 0, 0],
@@ -10,7 +12,8 @@ const b = [
     [0, 0, 0, 0, 8, 0, 0, 7, 9]
 ];
 
-let formatted = [];
+let f = [];
+let o = b.slice();
 
 for (let i = 0; i < 9; i++) {
     if (i == 3 || i == 6) {
@@ -24,7 +27,29 @@ for (let i = 0; i < 9; i++) {
     b[1].splice(0, 3)
     b[2].splice(0, 3)
 
-    formatted[i] = [...first, ...second, ...third]
+    f[i] = [...first, ...second, ...third]
 }
 
-console.log(formatted)
+const checkOutside = (n, x, y) => {
+    if (b.includes) {
+
+    }
+}
+
+
+const check =  (x, y) => {
+    let a = [ 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    a.forEach(place => {
+        if (!a.includes(place)) {
+            
+        }
+    })
+}
+
+o.forEach(y => {
+    row.map((x, place) => {
+        if (place == 0) {
+            return check(x, y)
+        }
+    })
+});
