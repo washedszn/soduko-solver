@@ -4,9 +4,10 @@ const getRow = (board, cell) => {
     return row;
 }
 
-const availableInRow = (row) => {
+const availableInRow = (board, cell) => {
     let allNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
+    let row = getRow(board, cell);
+    
     let available = allNumbers.filter(c => !row.includes(c));
 
     return available;
