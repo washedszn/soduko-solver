@@ -13,4 +13,4 @@ const availableInRow = (board, cell) => {
     return available;
 }
 
-module.exports = { getRow, availableInRow };
+module.exports = availableInRow;

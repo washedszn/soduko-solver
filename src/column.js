@@ -14,4 +14,4 @@ const availableInCol = (board, cell) => {
     return available;
 }
 
-module.exports = { getColumn, availableInCol };
+module.exports = availableInCol;

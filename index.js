@@ -1,11 +1,9 @@
-const {
-    availableInBox,
-    availableInRow,
-    availableInCol
-} = require('./src/index');
+const availableInBox = require('./src/box');
+const availableInRow = require('./src/row');
+const availableInCol = require('./src/column');
 
 const log = () => {
-    console.log(board.join('\n'))
+    console.log(board.join('\n'), '\nSolved!')
 }
 
 const board = [
@@ -31,7 +29,6 @@ async function run() {
                 if (aBox.length && aRow.length && aCol.length) {
                     let allN = [1, 2, 3, 4, 5, 6, 7, 8, 9];
                     let match = allN.filter(n => all.filter(v => v == n).length == 3)
-                    console.log(match)
                     if (match.length == 1) {
                         board[i][e] = match[0]
                     }
@@ -40,11 +37,10 @@ async function run() {
         }
     }
     if (board.filter(r => r.filter(n => n == 0).length).length) {
-        console.log('hit')
-        log()
+        console.log('Recursing')
         return run()
     }
-    log()
+    log();
 }
 
 run()

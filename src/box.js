@@ -16,9 +16,10 @@ const getBox = (board, cell) => {
 const availableInBox = (board, cell) => {
     let allNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     let box = getBox(board, cell);
+
     let required = allNumbers.filter(n => !box.includes(n));
 
     return required;
 }
 
-module.exports = { getBox, availableInBox };
+module.exports = availableInBox;
